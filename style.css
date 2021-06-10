@@ -1,0 +1,276 @@
+* {
+    margin: 0; padding: 0;
+    font-family: franklin-gothic-urw; 
+    color: #2A453E;
+
+     /* background: #000 !important;
+      color: #0f0 !important; */
+      /* outline: solid #f00 1px !important;  */
+  }
+
+body {
+  background-color: #F4F0DB;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 1vh;
+  border-radius: 1vh;
+}
+
+.side-by-side{
+  display: flex;
+}
+
+.right-portrait-container, .left-portrait-container{
+  
+
+ width: 55%;
+ 
+}
+
+#bittern{
+  width: 40%
+}
+
+
+
+.left-text{
+  width: 45%;
+
+  margin-right: 10%;
+}
+
+.right-text{
+  width: 60%;
+
+  margin-left: 5%;
+}
+
+p, h3 {
+  margin-bottom: 3.8vh;
+}
+
+h3{
+  font-size: 25px
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 3.8vh;
+    font-family: minion-pro;
+    color: black;
+   
+}
+
+.wrapper {
+  height: 120vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.section { 
+  position: relative;
+  height: 120vh;
+  display: flex;
+
+
+  
+}
+
+.text {
+  margin: 8% 17%;
+ 
+}
+
+.headline{
+  font-size: 50px;
+}
+
+.overline {
+  font-size: 20px;
+  font-weight: normal
+}
+
+.byline {
+ font-size: 18px;
+ margin-top: 18px;
+ margin-bottom: 7.6vh;
+}
+
+.caption{
+  /* font-weight: bold; */
+  font-style: italic;
+  margin-bottom: 7.6vh;
+}
+
+.parallax-caption{
+  margin: 2% 17%;
+  font-size: 15px;
+
+}
+
+.portrait {
+  width: 30%;
+}
+
+.parallax::after, .section .header {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -1;
+  background-attachment: initial;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-color: #2A453E; */
+   background-color: #F4F0DB;
+}
+.no-touch .parallax::after, .no-touch .section .header  {
+   background-attachment: fixed;
+
+}
+
+
+
+.header {
+  background-image: url("images/mockingbird.jpg");
+}
+
+.bg2::after {
+  background-image: url("images/teeth.jpg");
+}
+
+.robins::after {
+  background-image: url("images/robins.jpg");
+}
+
+.mockingbird::after {
+  background-image: url("images/mockingbird.jpg");
+}
+
+.dead_bird_monitoring::after {
+  /* color: white;
+ 
+
+  
+  font-size: 30px;
+  font-weight: bold;
+
+  content: "Max Gotts '24, looking for window strikes outside Prospect House.  Birding Society is currently working with the University to install bird-safe window film."; */
+  background-image: url("images/max.jpg");
+}
+
+.kojo::after {
+  background-image: url("images/kojo.jpg");
+  background-position-y: top;
+}
+
+.joe::after {
+  background-image: url("images/joe.jpg");
+  background-position-y: top;
+}
+
+.hawk1::after {
+  background-image: url("images/hawk1.jpg");
+} 
+
+.hawk2::after {
+  background-image: url("images/hawk2.jpg");
+}
+
+.fox::after {
+  background-image: url("images/fox.jpg");
+}
+
+.feeders::after {
+  background-image: url("images/feeders.jpg");
+}
+
+.dead_bird_spreadsheet::after {
+  background-image: url("images/dead_bird_spreadsheet.png");
+}
+
+.claire::after {
+  background-image: url("images/claire.jpg");
+  background-position-y: top;
+}
+
+.bluebird::after {
+  background-image: url("images/bluebird.jpg");
+}
+
+.birders::after {
+  background-image: url("images/birders.jpg");
+}
+
+.beaver::after {
+  background-image: url("images/beaver.jpg");
+}
+
+.charles_rogers::after {
+  background-image: url("images/marsh.jpg");
+}
+
+/* sets different rules for narrower screens (usually meaning mobile) If
+you want to quickly test how this works on your computer, just make your 
+browser window really skinny */
+@media screen and (max-width: 800px) {
+  .text {
+    margin: 10%;
+  }  
+
+  .parallax-caption{
+    margin-left: 10%;
+     margin-right: 10%
+  }
+
+  .side-by-side{
+    flex-direction: column;
+  }
+
+  .right-portrait-container, .left-portrait-container{
+  
+
+ width: 100% !important;
+ 
+}
+
+
+.left-text{
+  width: 100% !important;
+
+  margin-right: 10%;
+}
+
+.right-text{
+  width: 100%;
+
+  margin-left: 0%;
+}
+.parallax::after, .header{
+   background-attachment: initial;
+   background-size: contain;
+   z-index: 1;
+
+}
+
+.no-touch .parallax::after, .no-touch .section .header {
+   background-attachment: initial;
+
+}
+
+
+.section{
+  height: 50vh;
+}
+
+.logo a{
+  font-size: 15px;
+}
+
+}
